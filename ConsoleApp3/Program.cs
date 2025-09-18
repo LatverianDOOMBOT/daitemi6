@@ -5,16 +5,22 @@ Console.WriteLine("Type Temp inputted: ");
 string typeTemp = Console.ReadLine();
 typeTemp = typeTemp.ToLower();
 
-if (typeTemp == "celcius")
+
+if (!string.IsNullOrEmpty(typeTemp)) // ne mi se pishat 10000 takiva stiga tolkova nqma da proverqvam float t
 {
-    Console.WriteLine("Input: ");
-    float t = float.Parse(Console.ReadLine());
-    Console.WriteLine(t - diffToKelvin);
-}else if (typeTemp == "kelvin")
-{
-    Console.WriteLine("Input: ");
-    float t = float.Parse(Console.ReadLine());
-    Console.WriteLine(t + diffToKelvin);
+    if (typeTemp == "celcius")
+    {
+        Console.WriteLine("Input: ");
+        float t = float.Parse(Console.ReadLine());
+        Console.WriteLine(t - diffToKelvin);
+    }
+    else if (typeTemp == "kelvin")
+    {
+        Console.WriteLine("Input: ");
+        float t = float.Parse(Console.ReadLine());
+        Console.WriteLine(t + diffToKelvin);
+    }
 }
+
 
 
