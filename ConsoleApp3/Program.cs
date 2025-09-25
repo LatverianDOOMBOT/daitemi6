@@ -8,18 +8,20 @@ typeTemp = typeTemp.ToLower();
 
 if (!string.IsNullOrEmpty(typeTemp)) // ne mi se pishat 10000 takiva stiga tolkova nqma da proverqvam float t
 {
+    float t = float.Parse(Console.ReadLine());
     if (typeTemp == "celcius")
     {
         Console.WriteLine("Input: ");
-        float t = float.Parse(Console.ReadLine());
-        Console.WriteLine(t - diffToKelvin);
+
+        t = t - diffToKelvin;
     }
     else if (typeTemp == "kelvin")
     {
         Console.WriteLine("Input: ");
-        float t = float.Parse(Console.ReadLine());
-        Console.WriteLine(t + diffToKelvin);
+
+        t = t + diffToKelvin;
     }
+    Console.WriteLine($"Converted Temp: {t}");
 }
 
 
